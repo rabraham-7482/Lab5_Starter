@@ -31,7 +31,11 @@ function init() {
     image.src = 'assets/images/smiling-open.png';
     image.alt = 'Speaking Face';
     window.speechSynthesis.speak(utterThis);
+    utterThis.addEventListener('end', (event) => {
+      image.src = "assets/images/smiling.png";
+    });
   });
-  image.src = 'assets/images/smiling.png';
-  image.alt = 'Smiling Face';
+  
+  //image.src = 'assets/images/smiling.png';
+  //image.alt = 'Smiling Face';
 }
